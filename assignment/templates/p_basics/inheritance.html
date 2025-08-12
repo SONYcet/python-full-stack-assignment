@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            margin-top: 40px;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .class-block {
+            margin-top: 20px;
+        }
+
+        .class-title {
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin: 6px 0;
+            color: #333;
+        }
+
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Inheritance</h1>
+
+<div class="section">
+    <h2>Override Method</h2>
+
+    <div class="class-block">
+        <div class="class-title">Vehicle class</div>
+        <p>{{ v_m1 }}</p>
+        <p>{{ v_m2 }}</p>
+    </div>
+
+    <div class="class-block">
+        <div class="class-title">Car class</div>
+        <p>{{ c_m1 }}</p>
+        <p>{{ c_m2 }}</p>
+    </div>
+
+    <div class="class-block">
+        <div class="class-title">Electric Car class</div>
+        <p>{{ e_m1 }}</p>
+        <p>{{ e_m2 }}</p>
+        <p>{{ e_m3 }}</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Own Objects</h2>
+
+    <div class="class-block">
+        <div class="class-title">Vehicle class</div>
+        <p>{{ v_m11 }}</p>
+        <p>{{ v_m21 }}</p>
+        <p>{{ v_m31 }}</p>
+    </div>
+
+    <div class="class-block">
+        <div class="class-title">Car class</div>
+        <p>{{ c_m11 }}</p>
+        <p>{{ c_m21 }}</p>
+        <p>{{ c_m31 }}</p>
+    </div>
+
+    <div class="class-block">
+        <div class="class-title">Electric Car class</div>
+        <p>{{ e_m11 }}</p>
+        <p>{{ e_m21 }}</p>
+        <p>{{ e_m31 }}</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Overridden Method with Super Class</h2>
+    <p class="note">Overridden methods from all classes:</p>
+    <p>{{ super_methods|safe }}</p>
+</div>
+
+<div class="section">
+    <h2>Overridden Data Members (Instance Variables) with Super Class</h2>
+    <p class="note">Overridden data members from all classes:</p>
+    <p>{{ super_variables|safe }}</p>
+</div>
+
+</body>
+</html>

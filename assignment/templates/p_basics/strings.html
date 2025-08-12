@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Strings</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fefefe;
+      margin: 0;
+      padding: 30px 20px;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 40px;
+      text-transform: capitalize;
+    }
+
+    h2 {
+      color: #2980b9;
+      border-left: 5px solid #2980b9;
+      padding-left: 12px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    p, pre {
+      max-width: 650px;
+      background: #fff;
+      margin: 10px auto;
+      padding: 12px 18px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      font-size: 1rem;
+      word-break: break-word;
+    }
+
+    pre {
+      font-family: 'Courier New', Courier, monospace;
+      white-space: pre-wrap;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto 40px auto;
+      background: #f9f9f9;
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    input[type="text"] {
+      padding: 8px 10px;
+      font-size: 1rem;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus {
+      border-color: #2980b9;
+      outline: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #2980b9;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1f5f8b;
+    }
+
+    .result {
+      max-width: 650px;
+      margin: 10px auto 40px auto;
+      padding: 12px 18px;
+      border-left: 5px solid #2980b9;
+      background-color: #eaf4fb;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h1>Strings</h1>
+
+  <h2>Creating strings in different ways</h2>
+  <p>str1: {{ str1 }} &rarr; type: {{ type1 }}</p>
+  <p>str2: {{ str2 }}</p>
+  <p>str3: {{ str3 }}</p>
+
+  <h2>String concatenating with '+' </h2>
+  <p>str1: {{ str1 }}</p>
+  <p>str2: {{ str2 }}</p>
+  <p>{{ con }}</p>
+
+  <h2>Length of a string</h2>
+  <p>str1: {{ str1 }}</p>
+  <p>length: {{ len1 }}</p>
+
+  <h2>Substring</h2>
+  <p>str1: {{ str1 }}</p>
+  <p>sub-string: {{ sub }}</p>
+
+  <h2>Searching with index</h2>
+  <p>str1: {{ str1 }}</p>
+  <p>result: {{ sear }}</p>
+
+  <h2>Matching a String Against a Regular Expression</h2>
+  <p>re-pattern: {{ pattern }}</p>
+
+  <form method="POST">
+    {% csrf_token %}
+    <label for="string-input">Enter the string:</label>
+    <input type="text" id="string-input" name="string" />
+    <button type="submit">Submit</button>
+  </form>
+
+  {% if result %}
+  <p class="result">{{ result }}</p>
+  {% endif %}
+
+  <h2>Comparing strings</h2>
+  <p>str1: {{ str1 }}</p>
+  <p>str2: {{ str2 }}</p>
+  <p>equal: {{ equal }}</p>
+  <p>not_equal: {{ not_equal }}</p>
+  <p>less_than: {{ less_than }}</p>
+  <p>greater_than: {{ greater_than }}</p>
+  <p>lr_equal: {{ lr_equal }}</p>
+  <p>gr_equal: {{ gr_equal }}</p>
+
+  <h2>Ends with, starts with</h2>
+  <p>str1: {{ str1 }}</p>
+  <p>starts_with("Hello"): {{ starts_with }}</p>
+  <p>ends_with("02"): {{ ends_with }}</p>
+
+  <h2>Trimming strings with strip()</h2>
+  <pre>str4: {{ str4 }}</pre>
+  <p>after strip method: {{ strip_fucn }}</p>
+
+  <h2>Replacing characters in strings with replace()</h2>
+  <p>str4: {{ str4 }}</p>
+  <p>replacing (buddies with friends): {{ replacing }}</p>
+
+  <h2>Splitting strings with split()</h2>
+  <p>The original string: {{ str1 }}</p>
+  <p>after splitting: {{ splitting }}</p>
+
+  <h2>Converting integer objects to Strings</h2>
+  <p>The Number: {{ a }}</p>
+  <p>Number Type: {{ type_a }}</p>
+  <p>String number: {{ b }}</p>
+  <p>Number type: {{ type_b }}</p>
+
+  <h2>Converting to uppercase and lowercase</h2>
+  <p>str1: {{ str1 }}</p>
+  <p>upper_case: {{ upper_case }}</p>
+  <p>lower_case: {{ lower_case }}</p>
+</body>
+</html>

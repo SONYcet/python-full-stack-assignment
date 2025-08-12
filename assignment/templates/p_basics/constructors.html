@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructors</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        strong {
+            color: #34495e;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Constructor Output</h1>
+        <h2>Class with default, one-arg, and two-arg constructors</h2>
+        <div class="section">
+            <p><strong>Default:</strong> {{ obj11.message }}</p>
+            <p><strong>1-arg:</strong> {{ obj22.message }}</p>
+            <p><strong>2-arg:</strong> {{ obj33.message }}</p>
+        </div>
+
+        <h2>Superclass Constructors Called from Child Classes</h2>
+        <div class="section">
+            <p><strong>Child 1 - SuperClass message:</strong> {{ c1.message }}</p>
+            <p><strong>Child 1 - ChildClass message:</strong> {{ c1.child_message }}</p>
+
+            <p><strong>Child 2 - SuperClass message:</strong> {{ c2.message }}</p>
+            <p><strong>Child 2 - ChildClass message:</strong> {{ c2.child_message }}</p>
+        </div>
+
+        <h2>Access Modifiers Output</h2>
+        <div class="section">
+            <p><strong>Public:</strong> {{ public }}</p>
+            <p><strong>Protected:</strong> {{ protected }}</p>
+            <p><strong>Private:</strong> {{ private }}</p>
+        </div>
+
+        <h2>Illustrating Constructor-like Attribute Use</h2>
+        <div class="section">
+            {% if p %}
+                <p><strong>Name:</strong> {{ p.name }}</p>
+                <p><strong>Price:</strong> ${{ p.price }}</p>
+                <p><strong>Status:</strong> {{ p.available|yesno:"Available,Not Available" }}</p>
+                <p><strong>Message:</strong> {{ p.message }}</p>
+            {% else %}
+                <p>No product data available.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

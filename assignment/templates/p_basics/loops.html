@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Loops</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f9fc;
+    color: #34495e;
+    margin: 0; padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+  }
+  h2 {
+    color: #2980b9;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-top: 30px;
+  }
+  ol {
+    background: #ecf0f1;
+    border-radius: 6px;
+    padding: 15px 30px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ol li p {
+    margin: 5px 0;
+  }
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+    line-height: 1.4;
+  }
+  form {
+    margin-top: 20px;
+    max-width: 300px;
+    padding: 15px;
+    background: #d6eaf8;
+    border-radius: 8px;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  input[type=text] {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  button {
+    background-color: #2980b9;
+    border: none;
+    padding: 10px 18px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #1f6391;
+  }
+  .result {
+    margin-top: 15px;
+    background-color: #d1f2eb;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    max-width: 400px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Loops</h1>
+
+<h2>Bright It Career 10 Times</h2>
+<ol>
+  {% for i in ten_times %}
+    <li><p>Bright IT Career</p></li>
+  {% endfor %}
+</ol>
+
+<h2>1-20 Digits Using While Loop</h2>
+<p>Range: 1-20</p>
+<p>{{ list1|safe }}</p>
+
+<h2>Equal and Not Equal</h2>
+<p>{{ string2|safe }}</p>
+
+<h2>Even and Odd numbers</h2>
+<p><strong>Even Numbers:</strong> {{ str1 }}</p>
+<p><strong>Odd Numbers:</strong> {{ str2 }}</p>
+
+<h2>Largest Number Among Three Numbers</h2>
+<p>List of three numbers: {{ max1 }}</p>
+<p>Largest Number: {{ max2 }}</p>
+
+<h2>Even Number Between 10 and 20 using While</h2>
+<p>Numbers from 10 - 20: {{ list2 }}</p>
+<p>Even Numbers: {{ str3 }}</p>
+
+<h2>Number from 1-10 using do-While</h2>
+<p>Numbers from 1 - 10: {{ str4 }}</p>
+
+<h2>Armstrong Number</h2>
+<p>Number: {{ num1 }}</p>
+<p>Armstrong Number (True/False): {{ is_armstr }}</p>
+
+<h2>Prime Number</h2>
+<p>Given Number: {{ a1 }}</p>
+<p>If factors are more than 2 then it is not a prime number</p>
+<p>{{ list3 }}</p>
+
+<h2>Palindrome Number</h2>
+<p>Given Number: {{ a2 }}</p>
+<p>Reversed Number: {{ d2 }}</p>
+<p>Result: {{ resul }}</p>
+
+<h2>Even or Odd using Switch</h2>
+<p>Given Number: {{ num3 }}</p>
+<p>Result: {{ result }}</p>
+
+<h2>F/M using Switch</h2>
+
+<form method="POST">
+  {% csrf_token %}
+  <label for="gender">Enter Gender (M/F):</label>
+  <input type="text" name="gender" id="gender" maxlength="1" placeholder="M or F" required>
+  <button type="submit">Submit</button>
+</form>
+
+{% if result2 %}
+  <div class="result">{{ result2 }}</div>
+{% endif %}
+
+</body>
+</html>

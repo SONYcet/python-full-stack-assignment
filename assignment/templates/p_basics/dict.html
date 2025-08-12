@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #34495e;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #2980b9;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px 0 5px 0;
+            font-weight: 500;
+        }
+
+        pre {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            font-size: 15px;
+            overflow-x: auto;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dictionary Operations</h1>
+
+        <div class="section">
+            <h2>Original Dictionary</h2>
+            {% for key, value in dictionary.items %}
+                <pre>{{ key }}: {{ value }}</pre>
+            {% endfor %}
+        </div>
+
+        <div class="section">
+            <h2>Nested Dictionary</h2>
+            {% for key, value in nested_dict.items %}
+                <pre>{{ key }}: { name: {{ value.name }}, age: {{ value.age }}, grade: {{ value.grade }} }</pre>
+            {% endfor %}
+        </div>
+
+        <div class="section">
+            <h2>Adding to Dictionary</h2>
+            {% for key, value in adding.items %}
+                <pre>{{ key }}: {{ value }}</pre>
+            {% endfor %}
+        </div>
+
+        <div class="section">
+            <h2>Updated Dictionary</h2>
+            {% for key, value in update.items %}
+                <pre>{{ key }}: {{ value }}</pre>
+            {% endfor %}
+        </div>
+
+        <div class="section">
+            <h2>Keys of Dictionary</h2>
+            <pre>{{ keys }}</pre>
+        </div>
+
+        <div class="section">
+            <h2>Accessing Elements</h2>
+            <p><strong>dictionary['004']:</strong> {{ accessing }}</p>
+            <p><strong>nested_dict['S004']['name'] and ['S003']['grade']:</strong> {{ access_nested }}</p>
+        </div>
+
+        <div class="section">
+            <h2>After Deletion</h2>
+            {% for key, value in delete.items %}
+                <pre>{{ key }}: {{ value }}</pre>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

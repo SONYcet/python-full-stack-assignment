@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Static Variable</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fafc;
+            margin: 0;
+            padding: 30px 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 50px;
+            text-transform: capitalize;
+        }
+
+        h2 {
+            color: #2980b9;
+            border-left: 5px solid #2980b9;
+            padding-left: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            max-width: 600px;
+            background: #fff;
+            margin: 10px auto;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+            font-size: 1rem;
+            word-break: break-word;
+        }
+
+        /* Highlight the variable name for clarity */
+        p::before {
+            content: "• ";
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Static Variable</h1>
+
+    <section>
+        <h2>Static variable and accessing through a class</h2>
+        <p>static variable --&gt; {{ school_var_name }}: {{ prin1 }}</p>
+    </section>
+
+    <section>
+        <h2>Static variable and accessing through an instance</h2>
+        <p>static variable --&gt; {{ school_var_name }}: {{ prin2 }}</p>
+    </section>
+
+    <section>
+        <h2>Static variable and change within the instance</h2>
+        <p>The original static variable before changing with instance --&gt; {{ school_var_name }}: {{ prin2 }}</p>
+        <p>Static variable value changed with instance --&gt; {{ school_var_name }}: {{ ins2 }}</p>
+        <p>The original static variable after changing with instance --&gt; {{ school_var_name }}: {{ prin2 }}</p>
+    </section>
+
+    <section>
+        <h2>Static variable and change within the class</h2>
+        <p>Original static variable --&gt; {{ school_var_name }}: {{ prin2 }}</p>
+        <p>Static variable value changed with class --&gt; {{ school_var_name }}: {{ class }}</p>
+        <p>Static variable after changed with class --&gt; {{ school_var_name }}: {{ prin3 }}</p>
+        <p>Static variable after changed with class --&gt; {{ school_var_name }}: {{ prin4 }}</p>
+    </section>
+
+</body>
+</html>

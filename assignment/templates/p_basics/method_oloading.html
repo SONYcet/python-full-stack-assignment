@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Method Overloading</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 30px 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #2980b9;
+            border-left: 5px solid #2980b9;
+            padding-left: 10px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        p {
+            background: #fff;
+            padding: 12px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+            margin-bottom: 12px;
+            font-size: 1rem;
+            line-height: 1.4;
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h1>method overloading</h1>
+
+    <section>
+        <h2>Two methods with the same name but different number of parameters of same type</h2>
+        <p>First method: {{ result_1|safe }}</p>
+        <p>Second method: {{ result_2|safe }}</p>
+        <p>Third method: {{ result_3|safe }}</p>
+    </section>
+
+    <section>
+        <h2>Two methods with the same name but different number of parameters of different data type</h2>
+        <p>First method: {{ int|safe }}</p>
+        <p>Second method: {{ str|safe }}</p>
+        <p>Third method: {{ list|safe }}</p>
+        <p>Fourth method: {{ dict|safe }}</p>
+    </section>
+
+    <section>
+        <h2>Two methods with the same name but same number of parameters of same data type</h2>
+        <p>First method: {{ str1|safe }}</p>
+        <p>Second method: {{ str2|safe }}</p>
+    </section>
+</body>
+</html>

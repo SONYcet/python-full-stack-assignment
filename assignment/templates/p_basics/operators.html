@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Operators</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9fbfd;
+            margin: 0;
+            padding: 30px 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            text-transform: capitalize;
+        }
+
+        h2 {
+            color: #2980b9;
+            border-left: 5px solid #2980b9;
+            padding-left: 12px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        ol {
+            background: #fff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            max-width: 400px;
+            margin: 0 auto 30px auto;
+        }
+
+        ol li {
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        div, p {
+            max-width: 450px;
+            margin: 0 auto 20px auto;
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        p {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        .equal-true {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .equal-false {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>operators</h1>
+
+    <h2>Arithmetic Operators</h2>
+    <ol>
+        <li>variable1: {{ var1 }}</li>
+        <li>variable2: {{ var2 }}</li>
+        <li>addition: {{ add }}</li>
+        <li>subtraction: {{ sub }}</li>
+        <li>multiplication: {{ mult }}</li>
+        <li>division: {{ div }}</li>
+    </ol>
+
+    <h2>Increment and Decrement</h2>
+    <div>
+        <p>Number: {{ number }}</p>
+        <p>Increment: {{ incre }}</p>
+        <p>Decrement: {{ decre }}</p>
+    </div>
+
+    <h2>Equal or Not</h2>
+    <div>
+        <p>Number1: {{ var1 }}</p>
+        <p>Number2: {{ var2 }}</p>
+        {% if are_equal %}
+            <p class="equal-true">These numbers are equal</p>
+        {% else %}
+            <p class="equal-false">These numbers are not equal</p>
+        {% endif %}
+    </div>
+
+    <h2>Relational Operators</h2>
+    <div>
+        <p>{{ var1 }} &lt; {{ var2 }} = {{ lt }}</p>
+        <p>{{ var1 }} &lt;= {{ var2 }} = {{ lte }}</p>
+        <p>{{ var1 }} &gt; {{ var2 }} = {{ gt }}</p>
+        <p>{{ var1 }} &gt;= {{ var2 }} = {{ gte }}</p>
+    </div>
+
+    <h2>Larger and Smaller Numbers</h2>
+    <div>
+        <p>Numbers: {{ var1 }}, {{ var2 }}</p>
+        <p>The larger number is: {{ larger }}</p>
+        <p>The smaller number is: {{ smaller }}</p>
+    </div>
+</body>
+</html>

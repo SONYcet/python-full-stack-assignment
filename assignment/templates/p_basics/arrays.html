@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 6px 0;
+            padding-left: 10px;
+            border-left: 3px solid #ecf0f1;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arrays</h1>
+
+        <div class="section">
+            <h2>Add Integer Values of an Array</h2>
+            <p><strong>The List:</strong> {{ list1 }}</p>
+            <p><strong>After Adding:</strong> {{ a }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Average Value of an Array of Integers</h2>
+            <p><strong>List:</strong> {{ list1 }}</p>
+            <p><strong>Sum of Items:</strong> {{ a }}</p>
+            <p><strong>Length:</strong> {{ length_is }}</p>
+            <p><strong>Average:</strong> {{ aver }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Index of an Array Element</h2>
+            <p><strong>List:</strong> {{ list1 }}</p>
+            <p><strong>Item:</strong> {{ d }}</p>
+            <p><strong>Index:</strong> {{ index_value }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Array Contains a Specific Value</h2>
+            <p><strong>List:</strong> {{ list1 }}</p>
+            <p><strong>Item:</strong> {{ b }}</p>
+            <p><strong>Result:</strong> {{ result }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Remove a Specific Element</h2>
+            <p><strong>Item:</strong> {{ c }}</p>
+            <p><strong>List After Removing:</strong> {{ list2 }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Copy an Array to Another</h2>
+            <p><strong>Original List:</strong> {{ list3 }}</p>
+            <p><strong>Copied List:</strong> {{ list4 }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Insert Element at Specific Position</h2>
+            <p><strong>List:</strong> {{ list6 }}</p>
+            <p><strong>Inserted at Index 1 (Item: 98):</strong></p>
+            <p><strong>New List:</strong> {{ list5 }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Min and Max Items in Array</h2>
+            <p><strong>List:</strong> {{ list5 }}</p>
+            <p><strong>Min:</strong> {{ min }}</p>
+            <p><strong>Max:</strong> {{ max }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Reverse Array Elements</h2>
+            <p><strong>Original List:</strong> {{ list7 }}</p>
+            <p><strong>Reversed List:</strong> {{ list8 }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Find Duplicates in an Array</h2>
+            <p><strong>List:</strong> {{ list9 }}</p>
+            <p><strong>Duplicates:</strong> {{ list10 }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Common Values Between Two Arrays</h2>
+            <p><strong>List 1:</strong> {{ list11 }}</p>
+            <p><strong>List 2:</strong> {{ list12 }}</p>
+            <p><strong>Common Items:</strong> {{ com }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Remove Duplicate Elements</h2>
+            <p><strong>Original List:</strong> {{ list14 }}</p>
+            <p><strong>Duplicates:</strong> {{ list15 }}</p>
+            <p><strong>After Removing Duplicates:</strong> {{ list13 }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Second Largest Number</h2>
+            <p><strong>List:</strong> {{ list17 }}</p>
+            <p><strong>Sorted:</strong> {{ e }}</p>
+            <p><strong>Second Largest:</strong> {{ sec_lar }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Even and Odd Integers</h2>
+            <p><strong>List:</strong> {{ list18 }}</p>
+            <p><strong>Even Count:</strong> {{ len_even }} — {{ even }}</p>
+            <p><strong>Odd Count:</strong> {{ len_odd }} — {{ odd }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Difference Between Min and Max</h2>
+            <p><strong>List:</strong> {{ e }}</p>
+            <p><strong>Max:</strong> {{ ma }}</p>
+            <p><strong>Min:</strong> {{ mi }}</p>
+            <p><strong>Difference:</strong> {{ diff }}</p>
+        </div>
+
+        <div class="section">
+            <h2>Verify Two Elements (12, 23) Exist</h2>
+            <p><strong>List:</strong> {{ list19 }}</p>
+            <p><strong>Searching Elements:</strong> {{ li }}</p>
+            <p><strong>Result:</strong> {{ result1 }}</p>
+        </div>
+    </div>
+</body>
+</html>
